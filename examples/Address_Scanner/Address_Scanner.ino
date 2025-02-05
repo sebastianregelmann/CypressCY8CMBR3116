@@ -1,4 +1,4 @@
-#include "CypressCY8CMBR3116.h"
+#include <CypressCY8CMBR3116.h>
 #include <Wire.h>
 
 #define I2C_START_ADDRESS 0     //I2C Address of the Cypress IC

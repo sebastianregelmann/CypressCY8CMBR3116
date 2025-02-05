@@ -175,7 +175,7 @@ This code request every 0.5 seconds the status of the touch buttons. It is asume
 ## Questions 
 When not sure what kind of buffer to request/send from/to the IC look into the register documentation from Cypress that is found here: [Register Map](https://www.infineon.com/dgdl/Infineon-CY8CMBR3xxx_CapSense_Express_Controllers_Registers_TRM-AdditionalTechnicalInformation-v06_00-EN.pdf?fileId=8ac78c8c7d0d8da4017d0f90b2ad7da7). 
 
-Also look into the CY8CMBR3116.cpp to check what kind of buffers are used and how they are used. Some methods return uint16_t buffers because the register is in this format. 
+Also look into the [CY8CMBR3116.cpp](https://github.com/sebastianregelmann/CypressCY8CMBR3116/blob/main/src/CypressCY8CMBR3116.cpp) to check what kind of buffers are used and how they are used. Some methods return uint16_t buffers because the register is in this format. 
 ## Installation
 
 Install my-project with npm

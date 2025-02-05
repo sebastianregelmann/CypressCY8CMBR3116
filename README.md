@@ -192,7 +192,3 @@ To use the Library you need to include the library in the Arduino Script:
 ```cpp
  #include <CypressCY8CMBR3116.h>
  ```
-
-
-```
-    

@@ -1,4 +1,4 @@
-#include "CypressCY8CMBR3116.h"
+#include <CypressCY8CMBR3116.h>
 #include <Wire.h>
 
 #define I2C_ADDRESS 0x51  //I2C Address of the 1. Cypress IC (0x51 is default)

@@ -8,7 +8,7 @@ A library for the Arduino IDE to control a Cpyress Cy8CMBR3116 Capsense Touch IC
 ## Definition
 
 ```cpp
-#include <YourLibrary.h>
+#include <CypressCY8CMBR3116.h>
 
 #define I2C_ADDRESS 0x51 //Default value    
 #define REQUEST_TIMEOUT 10
@@ -91,7 +91,7 @@ Look into the register Datasheet for the CMD_CTRL register. these functions send
 
 ## Example code
 ```cpp
-#include "CypressCY8CMBR3116.h"
+#include <CypressCY8CMBR3116.h>
 #include <Wire.h>
 
 #define I2C_ADDRESS 0x51      //I2C Address of the Cypress IC (0x51 is default)
@@ -176,12 +176,23 @@ This code request every 0.5 seconds the status of the touch buttons. It is asume
 When not sure what kind of buffer to request/send from/to the IC look into the register documentation from Cypress that is found here: [Register Map](https://www.infineon.com/dgdl/Infineon-CY8CMBR3xxx_CapSense_Express_Controllers_Registers_TRM-AdditionalTechnicalInformation-v06_00-EN.pdf?fileId=8ac78c8c7d0d8da4017d0f90b2ad7da7). 
 
 Also look into the [CY8CMBR3116.cpp](https://github.com/sebastianregelmann/CypressCY8CMBR3116/blob/main/src/CypressCY8CMBR3116.cpp) to check what kind of buffers are used and how they are used. Some methods return uint16_t buffers because the register is in this format. 
-## Installation
 
-Install my-project with npm
+# Installation
+This library can be installed like this: 
 
-```bash
-  npm install my-project
-  cd my-project
+## Zip-Download
+
+- Download this repository [here](https://github.com/sebastianregelmann/CypressCY8CMBR3116/archive/refs/heads/main.zip)
+- Rename the Zip file to CypressCY8CMBR3116.zip
+- Open the Arduino IDE 
+    -  Sketch -> Include Library -> Add .ZIP Libray ...
+    -  Select the renamed Zip file. 
+
+To use the Library you need to include the library in the Arduino Script: 
+```cpp
+ #include <CypressCY8CMBR3116.h>
+ ```
+
+
 ```
     

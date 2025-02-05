@@ -4,6 +4,7 @@
 A library for the Arduino IDE to control a Cpyress Cy8CMBR3116 Capsense Touch IC with I2C and the Wire.h library. 
 
 
+
 ## Definition
 
 ```cpp
@@ -58,7 +59,7 @@ First sets the registerAddress from wich bytes are read, then request byteCount 
 uint8_t dataBuffer[1] = {255};   //Data that gets written to the IC
 uint8_t errorCode = touchIC.set_I2C_ADDR(registerAddress);
 ````
-Writes the data to the predefined register. How big the buffer should be depends on the register that is written to. For further details look into the CY8CMBR3116.cpp file.
+Writes the data to the predefined register. How big the buffer should be depends on the register that is written to. For further details [look here](#Questions).
 
 ### Write bytecount to register address
 ```cpp
@@ -172,8 +173,9 @@ void printError(uint8_t errorCode) {
 This code request every 0.5 seconds the status of the touch buttons. It is asumend that all 16 sensors are configured as touch button. 
 
 ## Questions 
-When not sure what kind of buffer to request/send from/to the IC look into the register Dokumentation from Cypress that is found here: www.infineon.com/dgdl/Infineon-CY8CMBR3xxx_CapSense_Express_Controllers_Registers_TRM-AdditionalTechnicalInformation-v06_00-EN.pdf?fileId=8ac78c8c7d0d8da4017d0f90b2ad7da7. Also look into the CY8CMBR3116.cpp to check what kind of buffers are used and how they are used. Some methods return uint16_t buffers because the register is in this format. 
+When not sure what kind of buffer to request/send from/to the IC look into the register documentation from Cypress that is found here: [Register Map](https://www.infineon.com/dgdl/Infineon-CY8CMBR3xxx_CapSense_Express_Controllers_Registers_TRM-AdditionalTechnicalInformation-v06_00-EN.pdf?fileId=8ac78c8c7d0d8da4017d0f90b2ad7da7). 
 
+Also look into the CY8CMBR3116.cpp to check what kind of buffers are used and how they are used. Some methods return uint16_t buffers because the register is in this format. 
 ## Installation
 
 Install my-project with npm
